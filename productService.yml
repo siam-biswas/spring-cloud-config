@@ -1,0 +1,24 @@
+server:
+  port: 8081
+---
+spring:
+  profiles: one
+server:
+  port: 8900
+---
+spring:
+  profiles: two
+server:
+  port: 8899
+---
+spring.data.mongodb.host: localhost
+spring.data.mongodb.port: 27017
+spring.data.mongodb.database: prodcutDB
+
+message: Hello from product service
+spring:
+  kafka:
+    consumer:
+      group-id: group-1
+      auto-offset-reset: earliest
+      bootstrap-servers: localhost:9092
